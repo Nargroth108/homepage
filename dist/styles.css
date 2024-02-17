@@ -1,3 +1,189 @@
-body {
-  background-color: red;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+:root {
+  --blue: rgb(70, 150, 170);
+}
+
+svg {
+  height: 20px;
+}
+img {
+  height: 300px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  padding-right: 30px;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+h3 {
+  color: black;
+  font-size: 1.7rem;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.container {
+  display: grid;
+  justify-items: center;
+  gap: 30px;
+}
+
+header,
+main,
+footer {
+  max-width: 2500px;
+  display: grid;
+  justify-items: center;
+}
+
+header,
+footer {
+  background-color: var(--blue);
+}
+
+header,
+.contact-container {
+  padding: 2rem;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.bio-image-container {
+  position: relative;
+}
+
+.header-title {
+  position: absolute;
+  bottom: 5%;
+  color: white;
+  font-weight: normal;
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  font-size: 5rem;
+  padding-left: 10px;
+}
+
+.bio-container {
+  padding: 10px;
+  background-color: white;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding-left: 10px;
+  color: rgb(87, 87, 87);
+}
+
+footer {
+  color: white;
+}
+
+.contact-container {
+  display: grid;
+  gap: 15px;
+}
+
+p {
+  display: flex;
+  align-content: center;
+  gap: 5px;
+}
+
+.white-svg {
+  fill: white;
+}
+
+.contact {
+  font-size: 0.8rem;
+}
+
+.contact-icon {
+  height: 30px;
+}
+
+.contact-icons {
+  justify-content: space-evenly;
+}
+
+.footer-image {
+  width: 100%;
+  height: auto;
+}
+
+main {
+  display: grid;
+}
+
+.main-title {
+  padding-bottom: 10px;
+}
+
+.project-container {
+  display: grid;
+  gap: 50px;
+}
+
+section {
+  max-width: 90vw;
+  box-shadow: 0px 2px 5px 1px rgb(87, 87, 87);
+  aspect-ratio: 8/9;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+}
+
+.project-icons {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
+/* @media (max-width: 600px) {
+  header,
+  footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em;
+  }
+
+  .header-title {
+    font-size: 3rem;
+  }
+
+  .header-image {
+    width: 90vw;
+    height: auto;
+  }
+}
+ */
