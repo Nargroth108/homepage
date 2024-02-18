@@ -6,15 +6,22 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 100%;
+}
+
 :root {
   --blue: rgb(70, 150, 170);
 }
 
 svg {
   height: 20px;
-}
-img {
-  height: 300px;
 }
 
 ul {
@@ -52,19 +59,27 @@ h4 {
 header,
 main,
 footer {
-  max-width: 2500px;
+  width: 100%;
   display: grid;
   justify-items: center;
+  align-items: center;
 }
 
 header,
 footer {
   background-color: var(--blue);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-header,
-.contact-container {
-  padding: 2rem;
+header {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.profile-container {
+  display: grid;
+  justify-items: center;
 }
 
 .header-image {
@@ -79,7 +94,7 @@ header,
 
 .header-title {
   position: absolute;
-  bottom: 5%;
+  bottom: 7%;
   color: white;
   font-weight: normal;
   display: grid;
@@ -90,13 +105,20 @@ header,
   padding-left: 10px;
 }
 
-.bio-container {
+.bio-description,
+.bio-title,
+.links-container {
+  margin: -1px;
   padding: 10px;
   background-color: white;
-  display: grid;
-  justify-items: center;
-  gap: 10px;
-  padding-left: 10px;
+  width: 100%;
+}
+
+.bio-title {
+  text-align: center;
+}
+
+.bio-description {
   color: rgb(87, 87, 87);
 }
 
@@ -107,6 +129,8 @@ footer {
 .contact-container {
   display: grid;
   gap: 15px;
+  max-height: 300px;
+  padding: 1rem;
 }
 
 p {
@@ -133,6 +157,7 @@ p {
 
 .footer-image {
   width: 100%;
+  max-width: 1000px;
   height: auto;
 }
 
@@ -141,12 +166,17 @@ main {
 }
 
 .main-title {
-  padding-bottom: 10px;
+  padding-bottom: 30px;
+  font-weight: bold;
 }
 
 .project-container {
+  width: 100%;
   display: grid;
+  justify-items: center;
   gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 15px;
 }
 
 section {
@@ -169,21 +199,27 @@ section {
   right: 5%;
 }
 
-/* @media (max-width: 600px) {
-  header,
-  footer {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1em;
+@media (min-width: 600px) {
+  .bio-image-container {
+    max-width: 400px;
   }
 
-  .header-title {
-    font-size: 3rem;
+  .profile-container {
+    margin: 0px 5rem;
   }
 
-  .header-image {
-    width: 90vw;
-    height: auto;
+  .footer-image {
+    max-height: 400px;
+    padding: 30px;
+    justify-self: start;
+  }
+
+  .contact-icons {
+    justify-content: start;
+    gap: 30px;
+  }
+
+  .contact-container {
+    width: min-content;
   }
 }
- */
